@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { SelectOption } from 'src/app/models/data.model';
@@ -15,8 +15,7 @@ export class FilterComponent implements OnInit {
   @Input() appName: string = '';
   sortOptions$: Observable<SelectOption[]>;
   sortBySelect = 1;
-
-
+  
   constructor(private store: Store) { 
     this.sortOptions$ = this.store.pipe(select(selectSortByOptions));
   }
