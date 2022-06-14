@@ -1,0 +1,105 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import 'app/styles/fonts';
+@import 'app/styles/icons';
+@import 'app/styles/variables';
+
+* {
+    font: 400 16px/23px 'Jost', sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $primary;
+  }
+  
+  strong {
+    font-weight: 700;
+  }
+  
+  body {
+    background: #1F1B2C;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .filter {
+    .ng-select {
+      &.ng-select-single .ng-select-container .ng-value-container .ng-value .ng-value-label {
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .ng-dropdown-panel {
+        background: #fff;
+        border-radius: 10px;
+        width: 255px;
+        margin-left: -50px;
+        .ng-dropdown-panel-items .ng-option {
+          padding: 12px 24px;
+          border-bottom: 1px solid rgba($color: #3A4374, $alpha: .15);
+          position: relative;
+          &:last-child {
+            border-bottom: 0;
+          }
+          .ng-option-label {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+            color: $primaryLight;
+            transition: all .2s;
+            &:hover {
+              color: $buttonFeedback;
+            }
+          }
+          &.ng-option-selected::after {
+            content: '';
+            width: 13px;
+            height: 10px;
+            background: url("data:image/svg+xml, #{$arrow-check}") no-repeat;
+            position: absolute;
+            top: 15px;
+            right: 25px;
+          }
+        }
+      }
+    }
+  }
+  
+  .states {
+    .mat-button-toggle-group-appearance-standard {
+      .mat-button-toggle {
+        transition: all .2s;
+        margin: 0 14px 14px 0;
+        padding: 0;
+        background: $buttonToggle;
+        color: $primaryLight;
+        border-radius: 10px;
+        &.mat-button-toggle-checked {
+          color: #fff;
+          background: $primaryHover;
+        }
+        &:hover {
+          background: $btnUpvoteHover;
+        }
+      }
+      .mat-button-toggle-label-content {
+        line-height: 30px;
+        padding: 0;
+      }
+      .mat-button-toggle-button {
+        padding: 0 16px;
+      }
+    }
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.title {
+  font-size: 24px;
+}

@@ -1,0 +1,24 @@
+@import "/src/app/styles/variables";
+
+.kr-page {
+  padding: 20px 0;
+}
+
+.sidebar {
+    flex: 0 0 255px;
+    margin-right: 30px;
+    padding: 20px 0 20px 20px;
+  }
+  
+  .main-column {
+    flex: 1 1 auto;
+    // margin-right: 30px;
+    border-right: 5px solid;
+    padding-right: 30px;
+    border-image: linear-gradient(to bottom, $primary, $primaryLight) 0 1;;
+  }
+  
+.right-panel {
+  width: 500px;
+  transition: all .5s ease-in-out;
+}

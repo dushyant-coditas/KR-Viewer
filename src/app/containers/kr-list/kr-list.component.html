@@ -1,0 +1,6 @@
+<ul class="list">
+    <li *ngFor="let kr of krList" class="kr">
+      <app-kr-card class="kr-card" [ngClass]="{ 'selected': kr.id === (selectedKRId$ | async) }" [kr]="kr" (click)="onSelectKR(kr)"></app-kr-card>
+    </li>
+  </ul>
+  

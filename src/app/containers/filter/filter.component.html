@@ -1,0 +1,19 @@
+<section class="filter d-flex">
+    <div class="sort-block d-flex">
+        <div class="app-name d-flex">
+            <h3>{{ appName }}</h3>
+        </div>
+    </div>
+    <div class="sort-by d-flex">
+        <span>Sort by :</span>
+        <ng-select
+          [(ngModel)]="sortBySelect"
+          [items]="sortOptions$ | async"
+          [clearable]="false"
+          bindLabel="label"
+          bindValue="value"
+          [searchable]="false"
+          (change)="sortBySelected($event)"
+        ></ng-select>
+    </div>
+</section>

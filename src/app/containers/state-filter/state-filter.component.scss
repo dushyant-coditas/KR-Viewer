@@ -1,0 +1,33 @@
+@import "/src/app/styles/variables";
+
+.states {
+    background: $cardBackground;
+    border-radius: 10px;
+    padding: 24px 24px 10px;
+    margin-bottom: 24px;
+    .mat-button-toggle-group-appearance-standard {
+      display: flex;
+      flex-flow: row wrap;
+      border: 0;
+      #mat-button-toggle-1-button{
+        background-color: pink !important;
+      }
+      .mat-button-toggle.mat-button-toggle-checked {
+        border-radius: 10px;
+        background: $primary !important; 
+        color: #fff !important;
+      }
+      .mat-button-toggle + .mat-button-toggle {
+        border: 0;
+        border-radius: 10px;
+        background: $buttonToggle;
+        color: $primaryLight;
+      }
+    }
+  }
+
+  .mat-button-toggle-button {
+    background: $buttonToggle !important;
+    color: $primaryLight !important;
+  }
+

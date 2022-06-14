@@ -1,0 +1,11 @@
+<section class="states">
+    <mat-button-toggle-group multiple [value]="activeStates$ | async">
+        <mat-button-toggle
+        *ngFor="let state of states"
+        (change)="stateChange($event)"
+        [value]="state.value"
+        class="btn btn-state">
+            {{ state.label }}
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+</section>

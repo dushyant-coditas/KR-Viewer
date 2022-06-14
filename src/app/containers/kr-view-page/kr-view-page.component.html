@@ -1,0 +1,12 @@
+<section class="d-flex kr-page">
+    <aside class="sidebar">
+        <app-state-filter></app-state-filter>
+    </aside>
+    <section class="main-column">
+        <app-filter [appName]="appName"></app-filter>
+        <app-kr-list [krList]="(krList$ | async)!" (selectedKR)="onSelectKR($event)"></app-kr-list>
+    </section>
+    <section class="right-panel" *ngIf="isKRSelected">
+        <app-kr-detail [selectedKR]="(selectedKR$ | async)" (clearSelectedCard)="onClearKR()"></app-kr-detail>
+    </section>
+</section>

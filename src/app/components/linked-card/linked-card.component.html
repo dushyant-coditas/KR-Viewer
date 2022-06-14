@@ -1,0 +1,15 @@
+<div class="center">
+    <h3 class="title">
+      <a>{{ card?.cardNumber }}</a>
+    </h3>
+    <p class="description"
+    matTooltip="{{card?.title}}"
+    matTooltipPosition="above">
+      {{ card?.title }}
+    </p>
+    <p class="state">
+      <button class="btn btn-state" [ngClass]="getClass()">
+        {{ card?.state }}
+      </button>
+    </p>
+</div>
