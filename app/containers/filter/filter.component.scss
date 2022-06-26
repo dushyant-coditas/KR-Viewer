@@ -1,0 +1,76 @@
+@import '/src/app/styles/variables.scss';
+@import '/src/app/styles/buttons.scss';
+
+.filter {
+  background: $primary;
+  border-radius: 10px;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 0 24px;
+
+  .repo-name {
+    span {
+      margin-right: 0;
+      i.repo-icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        -webkit-mask-image: url("../../styles/repo.svg");
+        mask-image: url("../../styles/repo.svg");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-size: 28px;
+        z-index: 10;
+      }
+    }
+    
+  }
+}
+
+::ng-deep .repo-name .ng-select.ng-select-single .ng-select-container 
+  .ng-value-container .ng-value .ng-value-label {
+    font-size: 18px;
+}
+
+span {
+  margin-right: 10px;
+}
+
+.sort-block {
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.total-suggestion {
+  color: #fff;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-right: 38px;
+  svg {
+    margin-right: 16px;
+  }
+}
+
+.sort-by {
+  flex-flow: row nowrap;
+  color: $grey;
+  align-items: center;
+}
+
+.btn-logout {
+  margin-left: 10px;
+}
+
+::ng-deep .ng-input {
+  cursor: pointer !important;
+}
+
+.app-name {
+  h3 {
+    color: $appName
+  }
+}
+
+

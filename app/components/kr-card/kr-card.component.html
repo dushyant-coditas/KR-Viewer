@@ -1,0 +1,32 @@
+<div class="status">
+    <button class="kr-status" [ngClass]="getButtonClass()">
+      <div class="core">
+        <i class="right-icon" *ngIf="kr?.status; else failed"></i>
+      <ng-template #failed>
+        <i class="cross-icon"></i>
+      </ng-template>
+      </div>
+      
+    </button>
+  </div>
+  <div class="center">
+    <h3 class="title">
+      <a [href]="navigateRootUrl" 
+      target="_blank">{{ kr?.krCardNumber }}</a>
+    </h3>
+    <h5 class="description">
+      {{ kr?.title }}
+    </h5>
+    
+    <button class="date btn btn-state">
+        {{ kr?.date | date }}
+    </button>
+
+  </div>
+  <span class="comments-count">
+    <p class="state">
+      <button class="btn btn-state" [ngClass]="getClass()">
+        {{ kr?.state }}
+      </button>
+    </p>
+  </span>
